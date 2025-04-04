@@ -42,6 +42,7 @@
                             <input type="text" class="form-control" id="phone" placeholder="Phone Number" th:field="*{phoneNumber}" required>
                             <small id="phoneError" class="text-danger"></small>
                             <small class="text-danger" th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></small>
+                            <small class="text-danger" th:if="${phoneError}" th:text="${phoneError}"></small>
                         </div>
                         <div class="mb-3">
                             <label for="role" class="form-label">Role</label>
@@ -56,7 +57,7 @@
                         </div>
                         <div id="departmentDiv" class="mb-3" style="display: none;" th:field="*{department}">
                             <label for="department" class="form-label" >Select Department</label>
-                            <select class="form-control" id="department">
+                            <select class="form-control" id="department" th:field="*{department}">
                                 <option value="">Select Department</option>
                                 <option th:each="dept : ${department}" th:value="${dept.departmentId}" th:text="${dept.departmentName}"></option>
                             </select>
@@ -85,7 +86,7 @@
         departmentDiv.style.display = (role === "DOCTOR") ? "block" : "none";
     }
 
-    function validateForm(){
+   /* function validateForm(){
         let isValid=true;
 
         let name= document.getElementById("name").value.trim();
@@ -140,6 +141,7 @@
     }
 
         document.querySelector("form").addEventListener("submit", validateForm);
+    */
 </script>
 
 </body>

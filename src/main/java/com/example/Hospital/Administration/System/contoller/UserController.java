@@ -48,12 +48,17 @@ public class UserController {
     @PostMapping("/registration")
     public String userRegistration(@Valid @ModelAttribute User user, BindingResult result, RedirectAttributes redirectAttributes,Model model){
         if(result.hasErrors()){
-            return "login/user-registration";
+            return "redirect:/registration";
         }
-        boolean isSaved=userService.userRegistration(user);
-        if(!isSaved){
-            model.addAttribute("emailError","This email is already registered!");
-            return "login/user-registration";
+        String status=userService.userRegistration(user);
+        if(!"SUCCESS".equals(status)) {
+            redirectAttributes.addFlashAttribute("user", user);
+            if ("EMAIL_EXISTS".equals(status)) {
+                redirectAttributes.addFlashAttribute("emailError", "This email is already registered");
+            } else if ("PHONE_EXISTS".equals(status)) {
+                redirectAttributes.addFlashAttribute("phoneError", "This phone number is already registered");
+            }
+            return "redirect:/registration";
         }
         redirectAttributes.addFlashAttribute("success","Successfully registered");
 

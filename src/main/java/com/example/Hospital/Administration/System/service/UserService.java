@@ -12,11 +12,14 @@ public class UserService {
     UserRepository userRepository;
 
 
-   public boolean userRegistration(User user){
+   public String userRegistration(User user){
        if(userRepository.findByEmail(user.getEmail()).isPresent()){
-           return false;
+           return "EMAIL_EXISTS";
+       }
+       if(userRepository.findByPhoneNumber(user.getPhoneNumber()).isPresent()){
+           return "PHONE_EXISTS";
        }
        userRepository.save(user);
-       return true;
+       return "SUCCESS";
    }
 }
