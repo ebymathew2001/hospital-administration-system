@@ -1,0 +1,73 @@
+
+<!-- Header Area -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="header">
+    <header class="header">
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-7 col-12">
+                        <ul class="top-contact">
+                            <li><i class="fa fa-phone"></i>+880 1234 56789</li>
+                            <li><i class="fa fa-envelope"></i><a th:href="@{mailto:support@yourmail.com}">support@yourmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Topbar -->
+
+        <!-- Header Inner -->
+        <div class="header-inner">
+            <div class="container">
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-12">
+                            <div class="logo">
+                                <a th:href="@{/}"><img th:src="@{/img/logo.png}" alt="Logo"></a>
+                            </div>
+                            <div class="mobile-nav"></div>
+                        </div>
+                        <div class="col-lg-7 col-md-9 col-12">
+                            <div class="main-menu">
+                                <nav class="navigation">
+                                    <ul class="nav menu">
+                                        <li class="active"><a th:href="@{/doctor/home}">Home</a></li>
+
+                                        <li><a href="#">Appointments</a>
+                                            <ul class="dropdown">
+                                                <li><a th:href="@{/doctor/appointments/today}">Today’s Appointments</a></li>
+                                                <li><a th:href="@{/doctor/appointments/search}">Search by Patient ID</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li><a href="#">Prescriptions</a>
+                                            <ul class="dropdown">
+                                                <li><a th:href="@{/doctor/prescription/add}">Add Prescription</a></li>
+                                                <li><a th:href="@{/doctor/prescription/history}">Consultation History</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li><a th:href="@{/doctor/reassign}">Reassign Patient</a></li>
+
+                                        <li><a th:href="@{/logout}">Logout</a></li>
+                                    </ul>
+
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-12">
+                            <div class="get-quote">
+                                <a th:href="@{/appointment}" class="btn">Book Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Header Inner -->
+    </header>
+</th:block>
+</html>

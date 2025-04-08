@@ -48,10 +48,10 @@ public class SecurityConfig {
                             Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
                             for (GrantedAuthority authority : authorities) {
                                 if (authority.getAuthority().equals("ROLE_DOCTOR")) {
-                                    response.sendRedirect("/doctor/dashboard");
+                                    response.sendRedirect("/doctor/doctor-home");
                                     return;
                                 } else if (authority.getAuthority().equals("ROLE_PHARMACIST")) {
-                                    response.sendRedirect("/pharmacist/dashboard");
+                                    response.sendRedirect("/pharmacist/pharmacist-home");
                                     return;
                                 } else if (authority.getAuthority().equals("ROLE_RECEPTIONIST")) {
                                     response.sendRedirect("/reception/reception-home");
