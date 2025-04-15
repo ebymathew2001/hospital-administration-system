@@ -48,10 +48,11 @@
                             <label for="role" class="form-label">Role</label>
                             <select class="form-control" id="role" onchange="toggleDepartment()" th:field="*{role}" required>
                                 <option value="">Select Role</option>
-                                <option value="RECEPTIONIST">Receptionist</option>
+                                <option value="RECEPTIONIST" id="receptionistOption">Receptionist</option>
                                 <option value="DOCTOR">Doctor</option>
                                 <option value="PHARMACIST">Pharmacist</option>
                             </select>
+                            <input type="hidden" id="receptionistExists" th:value="${receptionistExists}" />
                             <small id="roleError" class="text-danger"></small>
                             <small class="text-danger" th:if="${#fields.hasErrors('role')}" th:errors="*{role}"></small>
                         </div>
@@ -85,6 +86,12 @@
         let departmentDiv = document.getElementById("departmentDiv");
         departmentDiv.style.display = (role === "DOCTOR") ? "block" : "none";
     }
+    document.addEventListener("DOMContentLoaded", () => {
+        const exists = document.getElementById("receptionistExists").value === "true";
+        if (exists) {
+            document.getElementById("receptionistOption").disabled = true;
+        }
+    });
 
      function validateForm(){
         let isValid=true;

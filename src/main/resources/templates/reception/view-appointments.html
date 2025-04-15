@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Receptionist - Appointments</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="mb-4">Receptionist - All Appointments</h2>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Doctor</th>
+            <th>Patient</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="appointment : ${appointments}">
+            <td th:text="${appointment.doctor.name}">Dr. Smith</td>
+            <td th:text="${appointment.patient.name}">John Doe</td>
+            <td th:text="${appointment.date}">2025-04-12</td>
+            <td th:text="${appointment.status}">PENDING</td>
+            <td>
+                <span th:if="${appointment.status.name() == 'COMPLETED'}" class="text-muted">✓ Completed</span>
+                <span th:if="${appointment.status.name() == 'CANCELLED'}" class="text-danger">✘ Cancelled</span>
+                <!-- Cancel button -->
+                <form th:action="@{/reception/appointment/cancel}" method="post"
+                      th:if="${#strings.toLowerCase(appointment.status) == 'pending'}" style="display:inline;">
+                    <input type="hidden" name="appointmentId" th:value="${appointment.id}" />
+                    <button type="submit" class="btn btn-danger btn-sm">Cancel</button>
+                </form>
+
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

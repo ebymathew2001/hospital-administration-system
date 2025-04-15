@@ -31,5 +31,83 @@ public class Patient {
 
 
     // Getters and Setters
+
+    public Patient() {
+    }
+
+    public Patient(Long id, String name, String email, String mobile, String address, String patientId, List<Appointment> appointments, List<Prescription> prescriptions) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.mobile = mobile;
+        this.address = address;
+        this.patientId = patientId;
+        this.appointments = appointments;
+        this.prescriptions = prescriptions;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getPatientId() {
+        return patientId;
+    }
+
+    public List<Appointment> getAppointments() {
+        return appointments;
+    }
+
+    public List<Prescription> getPrescriptions() {
+        return prescriptions;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setPatientId(String patientId) {
+        this.patientId = patientId;
+    }
+
+    public void setAppointments(List<Appointment> appointments) {
+        this.appointments = appointments;
+    }
+
+    public void setPrescriptions(List<Prescription> prescriptions) {
+        this.prescriptions = prescriptions;
+    }
 }
 

@@ -36,9 +36,10 @@
                                     <ul class="nav menu">
                                         <li class="active"><a th:href="@{/doctor/home}">Home</a></li>
 
+
                                         <li><a href="#">Appointments</a>
                                             <ul class="dropdown">
-                                                <li><a th:href="@{/doctor/appointments/today}">Today’s Appointments</a></li>
+                                                <li><a th:href="@{/doctor/appointments}">Today’s Appointments</a></li>
                                                 <li><a th:href="@{/doctor/appointments/search}">Search by Patient ID</a></li>
                                             </ul>
                                         </li>
@@ -52,7 +53,11 @@
 
                                         <li><a th:href="@{/doctor/reassign}">Reassign Patient</a></li>
 
-                                        <li><a th:href="@{/logout}">Logout</a></li>
+                                        <li></li><form th:action="@{/logout}" method="post">
+                                            <button type="submit">Logout</button>
+                                        </form>
+                                        </li>
+
                                     </ul>
 
                                 </nav>

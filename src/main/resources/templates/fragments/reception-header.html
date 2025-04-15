@@ -38,8 +38,9 @@
                                     <li class="dropdown">
                                         <a href="#">Patients</a>
                                         <ul class="dropdown">
-                                            <li><a th:href="@{/reception/patient/register}">New Registration</a></li>
-                                            <li><a th:href="@{/reception/patient/search}">Search Patient</a></li>
+                                            <li><a th:href="@{/reception/patient-registration}">New Registration</a></li>
+                                            <li><a th:href="@{/reception/appointments}">View Appointments</a></li>
+
                                         </ul>
                                     </li>
                                     <li class="dropdown">
@@ -52,8 +53,8 @@
                                     <li class="dropdown">
                                         <a href="#">Departments</a>
                                         <ul class="dropdown">
-                                            <li><a th:href="@{/reception/department/list}">View Departments</a></li>
-                                            <li><a th:href="@{/reception/department/add}">Add Department</a></li>
+                                            <li><a th:href="@{/reception/department-view}">View Departments</a></li>
+                                            <li><a th:href="@{/reception/department-form}">Add Department</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">Blogs</a>
@@ -61,7 +62,10 @@
                                             <li><a th:href="@{/blog-single}">Blog Details</a></li>
                                         </ul>
                                     </li>
-                                    <li><a th:href="@{/contact}">Contact Us</a></li>
+                                    <form th:action="@{/logout}" method="post">
+                                        <button type="submit">Logout</button>
+                                    </form>
+
                                 </ul>
                             </nav>
                         </div>

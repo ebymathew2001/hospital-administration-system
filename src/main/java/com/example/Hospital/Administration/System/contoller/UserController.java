@@ -2,7 +2,9 @@ package com.example.Hospital.Administration.System.contoller;
 
 
 import com.example.Hospital.Administration.System.entity.Department;
+import com.example.Hospital.Administration.System.entity.Role;
 import com.example.Hospital.Administration.System.entity.User;
+import com.example.Hospital.Administration.System.repository.UserRepository;
 import com.example.Hospital.Administration.System.service.DepartmentService;
 import com.example.Hospital.Administration.System.service.UserService;
 import jakarta.validation.Valid;
@@ -29,6 +31,9 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private UserRepository userRepository;
+
 
 
 
@@ -41,6 +46,9 @@ public class UserController {
     public String showRegistrationPage(Model model){
         model.addAttribute("user",new User());
         List<Department> departments=departmentService.getAllDepartments();
+        boolean receptionistExists = userRepository.existsByRole(Role.RECEPTIONIST); // ✅ This is correct
+
+        model.addAttribute("receptionistExists", receptionistExists);
         model.addAttribute("department",departments);
         return "login/user-registration";
     }

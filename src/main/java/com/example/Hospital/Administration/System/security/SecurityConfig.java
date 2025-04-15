@@ -30,7 +30,7 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())  // Consider enabling in production
                 .authorizeHttpRequests(requests -> requests
-                        .requestMatchers("/login","/login/**","/registration", "/css/**", "/js/**", "/images/**").permitAll()
+                        .requestMatchers("/login/**","/registration","/registration/**", "/css/**", "/js/**", "/images/**").permitAll()
                         .requestMatchers("/receptionist/**").hasRole("RECEPTIONIST")
                         .requestMatchers("/doctor/**").hasRole("DOCTOR")
                         .requestMatchers("/pharmacist/**").hasRole("PHARMACIST")
