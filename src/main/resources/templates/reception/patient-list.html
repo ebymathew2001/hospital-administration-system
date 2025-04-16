@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient List & Search</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Patient Directory</h2>
+
+    <!-- Search by ID -->
+    <form th:action="@{/reception/patient-list}" method="get" class="row g-3 mb-4">
+        <div class="col-md-4">
+            <input type="text" name="searchId" class="form-control" placeholder="Enter Patient ID" required>
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+        <div class="col-auto">
+            <a th:href="@{/reception/patient-list}" class="btn btn-secondary">Show All</a>
+        </div>
+    </form>
+
+    <!-- If a single searched patient is returned -->
+    <div th:if="${searchedPatient}">
+        <h5>Search Result:</h5>
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td th:text="${searchedPatient.patientId}">PT1234</td>
+                <td th:text="${searchedPatient.name}">John Doe</td>
+                <td th:text="${searchedPatient.mobile}">1234567890</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Full patient list -->
+    <div th:if="${patients}">
+        <h5>All Patients:</h5>
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="patient : ${patients}">
+                <td th:text="${patient.patientId}">PT1234</td>
+                <td th:text="${patient.name}">Jane Smith</td>
+                <td th:text="${patient.mobile}">9876543210</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Optional Error Message -->
+    <div th:if="${error}" class="alert alert-danger text-center mt-3">
+        <span th:text="${error}">Patient not found!</span>
+    </div>
+</div>
+
+</body>
+</html>

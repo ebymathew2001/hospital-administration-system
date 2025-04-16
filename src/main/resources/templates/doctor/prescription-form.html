@@ -2,29 +2,41 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>Prescription</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <title>Prescription Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="container mt-5">
-  <h2>Write Prescription</h2>
+  <h2>Prescription Form</h2>
   <form th:action="@{/doctor/prescription-submit}" method="post" th:object="${prescription}">
+
+    <!-- Hidden fields -->
     <input type="hidden" th:field="*{appointment.id}" />
     <input type="hidden" th:field="*{patient.id}" />
-    <input type="hidden" th:field="*{doctor.id}" />
+    <input type="hidden" th:field="*{doctor.userId}" />
 
+
+    <!-- Patient name -->
     <div class="mb-3">
-      <label>Patient Name:</label>
-      <input type="text" class="form-control" th:value="*{patient.name}" readonly>
-      <!-- or use: th:value="${prescription.patient.fullName}" -->
+      <label for="patientName" class="form-label">Patient Name</label>
+      <input type="text" id="patientName" class="form-control"
+             th:value="${prescription.patient.name}" readonly />
     </div>
 
+    <!-- Doctor name -->
     <div class="mb-3">
-      <label>Notes:</label>
-      <textarea class="form-control" th:field="*{notes}" required></textarea>
+      <label for="doctorName" class="form-label">Doctor</label>
+      <input type="text" id="doctorName" class="form-control"
+             th:value="${prescription.doctor.name}" readonly />
     </div>
 
-    <button type="submit" class="btn btn-success">Save Prescription</button>
+    <!-- Notes -->
+    <div class="mb-3">
+      <label for="notes" class="form-label">Notes</label>
+      <textarea id="notes" class="form-control" th:field="*{notes}" rows="5" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit Prescription</button>
   </form>
 </div>
 </body>

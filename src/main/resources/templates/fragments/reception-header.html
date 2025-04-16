@@ -39,14 +39,15 @@
                                         <a href="#">Patients</a>
                                         <ul class="dropdown">
                                             <li><a th:href="@{/reception/patient-registration}">New Registration</a></li>
-                                            <li><a th:href="@{/reception/appointments}">View Appointments</a></li>
+                                            <li><a th:href="@{/reception/patient-list}">Patient-List</a></li>
 
                                         </ul>
                                     </li>
                                     <li class="dropdown">
                                         <a href="#">Appointments</a>
                                         <ul class="dropdown">
-                                            <li><a th:href="@{/reception/appointment/book}">Book Appointment</a></li>
+                                            <li><a th:href="@{/reception/select-existing-patient}">Book Appointment for existing patients</a></li>
+                                            <li><a th:href="@{/reception/appointments}">View Appointments</a></li>
                                             <li><a th:href="@{/reception/appointment/history}">View History</a></li>
                                         </ul>
                                     </li>

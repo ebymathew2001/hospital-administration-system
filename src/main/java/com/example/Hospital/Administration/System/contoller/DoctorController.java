@@ -87,12 +87,16 @@ public class DoctorController {
         return "doctor/prescription-form";
     }
 
-
-
     @PostMapping("/prescription-submit")
-    public String submitPrescription(@ModelAttribute Prescription prescription) {
+    public String savePrescription(@ModelAttribute Prescription prescription) {
         prescriptionRepository.save(prescription);
-        return "redirect:/doctor/appointments";
+
+        // Optionally update appointment status to COMPLETED
+        Appointment appointment = prescription.getAppointment();
+        appointment.setStatus(Status.COMPLETED);
+        appointmentRepository.save(appointment);
+
+        return "redirect:/doctor/doctor-home"; // or any success page
     }
 
 

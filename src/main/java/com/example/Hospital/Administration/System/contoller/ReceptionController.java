@@ -4,6 +4,7 @@ package com.example.Hospital.Administration.System.contoller;
 import com.example.Hospital.Administration.System.entity.*;
 import com.example.Hospital.Administration.System.repository.AppointmentRepository;
 import com.example.Hospital.Administration.System.repository.PatientRepository;
+import com.example.Hospital.Administration.System.service.PatientService;
 import com.example.Hospital.Administration.System.service.ReceptionService;
 import jakarta.persistence.Id;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,9 @@ public class ReceptionController {
 
     @Autowired
     private AppointmentRepository appointmentRepository;
+
+    @Autowired
+    private PatientService patientService;
 
 
     /**
@@ -114,6 +118,35 @@ public class ReceptionController {
         return "redirect:/reception/appointments";
     }
 
+    @GetMapping("/select-existing-patient")
+    public String searchPatient(@RequestParam(value = "patientId", required = false) String patientId, Model model) {
+        if (patientId != null && !patientId.isEmpty()) {
+            Optional<Patient> patient = patientService.findByPatientId(patientId);
+
+            if (patient.isPresent()) {
+                model.addAttribute("patient", patient.get());
+            } else {
+                model.addAttribute("error", "No patient found with ID: " + patientId);
+            }
+        }
+        return "reception/select-existing-patient"; // Always show the page
+    }
+
+    @GetMapping("/patient-list")
+    public String getPatients(@RequestParam(value = "searchId", required = false) String searchId, Model model) {
+        if (searchId != null && !searchId.trim().isEmpty()) {
+            Optional<Patient> searched = patientRepository.findByPatientId(searchId.trim());
+            if (searched.isPresent()) {
+                model.addAttribute("searchedPatient", searched.get());
+            } else {
+                model.addAttribute("error", "No patient found with ID: " + searchId);
+            }
+        } else {
+            List<Patient> patients = patientRepository.findAll();
+            model.addAttribute("patients", patients);
+        }
+        return "reception/patient-list"; // Update to your actual HTML filename
+    }
 
 
 
@@ -124,4 +157,8 @@ public class ReceptionController {
 
 
 
-}
+
+
+
+
+    }

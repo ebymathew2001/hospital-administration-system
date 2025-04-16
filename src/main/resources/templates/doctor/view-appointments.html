@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -8,37 +10,56 @@
 <body>
 <div class="container mt-5">
   <h2 class="mb-4">Doctor - My Appointments</h2>
-  <table class="table table-striped">
+
+  <div th:if="${appointments == null || appointments.isEmpty()}" class="alert alert-info">
+    No appointments found.
+  </div>
+
+  <table class="table table-striped" th:if="${appointments != null && !appointments.isEmpty()}">
     <thead>
     <tr>
       <th>Patient Name</th>
       <th>Date</th>
       <th>Status</th>
+      <th>Token Number</th>
       <th>Actions</th>
       <th>Update Status</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="appointment : ${appointments}">
-      <td th:text="${appointment.patient.name}">Patient Name</td>
-      <td th:text="${appointment.date}">2025-04-09</td>
-      <td th:text="${appointment.status}">PENDING</td>
-      <td>
-        <a th:href="@{/doctor/prescription-form/{id}(id=${appointment.id})}" class="btn btn-primary btn-sm mb-1">Add Prescription</a>
-      </td>
-      <td>
-        <span th:if="${appointment.status.name() == 'COMPLETED'}" class="text-muted">✓ Completed</span>
+    <tr th:each="appointment : ${appointments}" th:if="${appointment.status != null && appointment.status.name() != 'CANCELLED'}">
+      <td th:text="${appointment.patient?.name ?: ''}">Patient Name</td>
+      <td th:text="${appointment.date != null ? #temporals.format(appointment.date, 'yyyy-MM-dd') : ''}">Date</td>
+      <td th:text="${appointment.status}">Status</td>
+      <td th:text="${appointment.tokenNumber}">Token Number</td>
 
-        <!-- Mark as Completed (Case-insensitive check) -->
+      <!-- Actions -->
+      <td>
+        <!-- Add Prescription -->
+        <a th:if="${appointment.status?.name() == 'PENDING'}"
+           th:href="@{/doctor/prescription-form/{id}(id=${appointment.id})}"
+           class="btn btn-primary btn-sm mb-1">Add Prescription</a>
+
+        <a th:if="${appointment.status?.name() == 'COMPLETED'}"
+           th:href="@{/doctor/patient-history/{patientId}(patientId=${appointment.patient.id})}"
+           class="btn btn-info btn-sm mb-1">View History</a>
+        <!-- Note: Removed the View Prescription button that requires appointment.prescription -->
+      </td>
+
+      <!-- Status Update -->
+      <td>
+        <!-- Mark as completed button -->
         <form th:action="@{/doctor/appointment/complete}" method="post"
-              th:if="${#strings.toLowerCase(appointment.status) == 'pending'}" style="display:inline;">
+              th:if="${appointment.status?.name() == 'PENDING'}"
+              style="display:inline;">
           <input type="hidden" name="appointmentId" th:value="${appointment.id}" />
-
-
-          <button type="submit" class="btn btn-success btn-sm">Mark as Completed</button>
+          <button type="submit" class="btn btn-outline-success btn-sm">Mark as Completed</button>
         </form>
-      </td>
 
+        <!-- Status indicators - simplified to avoid checking prescription -->
+        <span th:if="${appointment.status?.name() == 'COMPLETED'}"
+              class="text-muted">✓ Completed</span>
+      </td>
     </tr>
     </tbody>
   </table>
