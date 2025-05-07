@@ -21,8 +21,8 @@
         </thead>
         <tbody>
         <tr th:each="appointment : ${appointments}">
-            <td th:text="${appointment.doctor.name}">Dr. Smith</td>
-            <td th:text="${appointment.patient.name}">John Doe</td>
+            <td th:text="${appointment.doctor?.name ?: ''}">Dr. Smith</td>
+            <td th:text="${appointment.patient?.name ?: ''}">John Doe</td>
             <td th:text="${appointment.date}">2025-04-12</td>
             <td th:text="${appointment.tokenNumber}">Token</td>
             <td th:text="${appointment.status}">PENDING</td>

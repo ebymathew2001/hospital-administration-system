@@ -92,7 +92,8 @@ public class DoctorController {
         prescriptionRepository.save(prescription);
 
         // Optionally update appointment status to COMPLETED
-        Appointment appointment = prescription.getAppointment();
+        Appointment appointment = appointmentRepository.findById(prescription.getAppointment().getId())
+                .orElseThrow(() -> new RuntimeException("Appointment not found"));
         appointment.setStatus(Status.COMPLETED);
         appointmentRepository.save(appointment);
 

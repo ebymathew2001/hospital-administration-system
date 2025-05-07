@@ -2,6 +2,8 @@ package com.example.Hospital.Administration.System.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Date;
+
 @Entity
 public class Prescription {
 
@@ -10,6 +12,14 @@ public class Prescription {
     private Long id;
 
     private String notes;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private PrescriptionStatus status = PrescriptionStatus.PENDING;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "created_at", nullable = false, updatable = false)
+    private Date createdAt;
 
     @ManyToOne
     @JoinColumn(name = "patient_id")
@@ -32,6 +42,13 @@ public class Prescription {
         this.patient = patient;
         this.doctor = doctor;
         this.appointment = appointment;
+
+    }
+
+
+    @PrePersist
+    protected void onCreate() {
+        this.createdAt = new Date();
     }
 // Getters and Setters
 
@@ -61,6 +78,22 @@ public class Prescription {
 
     public User getDoctor() {
         return doctor;
+    }
+
+    public PrescriptionStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(PrescriptionStatus status) {
+        this.status = status;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
     }
 
     public void setDoctor(User doctor) {

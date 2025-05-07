@@ -50,7 +50,7 @@ public class DepartmentController {
             redirectAttributes.addFlashAttribute("message", "Department added successfully!");
 
         }
-        return "redirect:/department-form";
+        return "redirect:/reception/department-form";
     }
 
     /**
@@ -93,7 +93,7 @@ public class DepartmentController {
         else{
             redirectAttributes.addFlashAttribute("message","The department added successfully");
         }
-        return "redirect:/department-view";
+        return "redirect:/reception/department-view";
     }
 
     /**
@@ -112,7 +112,7 @@ public class DepartmentController {
         else{
             redirectAttributes.addFlashAttribute("error","the department didn't exist");
         }
-        return "redirect:/department-view";
+        return "redirect:/reception/department-view";
     }
 
 
