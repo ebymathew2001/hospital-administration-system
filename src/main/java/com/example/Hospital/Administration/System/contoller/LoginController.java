@@ -33,7 +33,7 @@ public class LoginController {
                 if (authority.getAuthority().equals("ROLE_DOCTOR")) {
                     return "redirect:/doctor/doctor-home";
                 } else if (authority.getAuthority().equals("ROLE_PHARMACIST")) {
-                    return "redirect:/pharmacist/pharmacist-home";
+                    return "redirect:/pharmacy/pharmacist-home";
                 } else if (authority.getAuthority().equals("ROLE_RECEPTIONIST")) {
                     return "redirect:/reception/reception-home";
                 }

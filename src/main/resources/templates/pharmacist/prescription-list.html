@@ -23,7 +23,7 @@
     <tr th:each="prescription : ${prescriptions}">
       <td th:text="${prescription.patient.name}">Patient Name</td>
       <td th:text="${prescription.doctor.name}">Doctor Name</td>
-      <td th:text="${prescription.doctor.department.name}">Department</td>
+      <td th:text="${prescription.doctor.department.departmentName}">Department</td>
       <td th:text="${prescription.status}">Status</td>
       <td th:text="${#dates.format(prescription.createdAt, 'dd-MM-yyyy HH:mm')}">Time</td>
       <td th:text="${prescription.notes}">Notes</td>

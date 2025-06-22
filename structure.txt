@@ -1,0 +1,680 @@
+Folder PATH listing for volume New Volume
+Volume serial number is 88DA-AD07
+D:.
+¦   .gitattributes
+¦   .gitignore
+¦   HELP.md
+¦   mvnw
+¦   mvnw.cmd
+¦   pom.xml
+¦   README.md
+¦   structure.txt
+¦   
++---.idea
+¦       .gitignore
+¦       compiler.xml
+¦       encodings.xml
+¦       jarRepositories.xml
+¦       misc.xml
+¦       uiDesigner.xml
+¦       vcs.xml
+¦       watcherTasks.xml
+¦       workspace.xml
+¦       
++---.mvn
+¦   +---wrapper
+¦           maven-wrapper.properties
+¦           
++---src
+¦   +---main
+¦   ¦   +---java
+¦   ¦   ¦   +---com
+¦   ¦   ¦       +---example
+¦   ¦   ¦           +---Hospital
+¦   ¦   ¦               +---Administration
+¦   ¦   ¦                   +---System
+¦   ¦   ¦                       ¦   HospitalAdministrationSystemApplication.java
+¦   ¦   ¦                       ¦   
+¦   ¦   ¦                       +---contoller
+¦   ¦   ¦                       ¦       DepartmentController.java
+¦   ¦   ¦                       ¦       DoctorController.java
+¦   ¦   ¦                       ¦       LoginController.java
+¦   ¦   ¦                       ¦       PharmacistController.java
+¦   ¦   ¦                       ¦       ReceptionController.java
+¦   ¦   ¦                       ¦       UserController.java
+¦   ¦   ¦                       ¦       
+¦   ¦   ¦                       +---entity
+¦   ¦   ¦                       ¦       Appointment.java
+¦   ¦   ¦                       ¦       Department.java
+¦   ¦   ¦                       ¦       Patient.java
+¦   ¦   ¦                       ¦       Prescription.java
+¦   ¦   ¦                       ¦       PrescriptionStatus.java
+¦   ¦   ¦                       ¦       Role.java
+¦   ¦   ¦                       ¦       Status.java
+¦   ¦   ¦                       ¦       User.java
+¦   ¦   ¦                       ¦       
+¦   ¦   ¦                       +---repository
+¦   ¦   ¦                       ¦       AppointmentRepository.java
+¦   ¦   ¦                       ¦       DepartmentRepository.java
+¦   ¦   ¦                       ¦       PatientRepository.java
+¦   ¦   ¦                       ¦       PrescriptionRepository.java
+¦   ¦   ¦                       ¦       UserRepository.java
+¦   ¦   ¦                       ¦       
+¦   ¦   ¦                       +---security
+¦   ¦   ¦                       ¦       CustomUserDetailsService.java
+¦   ¦   ¦                       ¦       SecurityConfig.java
+¦   ¦   ¦                       ¦       
+¦   ¦   ¦                       +---service
+¦   ¦   ¦                               DepartmentService.java
+¦   ¦   ¦                               EmailService.java
+¦   ¦   ¦                               LoginService.java
+¦   ¦   ¦                               PatientService.java
+¦   ¦   ¦                               PrescriptionService.java
+¦   ¦   ¦                               ReceptionService.java
+¦   ¦   ¦                               UserService.java
+¦   ¦   ¦                               
+¦   ¦   +---resources
+¦   ¦       ¦   application.properties
+¦   ¦       ¦   
+¦   ¦       +---static
+¦   ¦       ¦   ¦   style.css
+¦   ¦       ¦   ¦   
+¦   ¦       ¦   +---css
+¦   ¦       ¦   ¦       animate.min.css
+¦   ¦       ¦   ¦       bootstrap.min.css
+¦   ¦       ¦   ¦       datepicker.css
+¦   ¦       ¦   ¦       font-awesome.min.css
+¦   ¦       ¦   ¦       icofont.css
+¦   ¦       ¦   ¦       magnific-popup.css
+¦   ¦       ¦   ¦       nice-select.css
+¦   ¦       ¦   ¦       normalize.css
+¦   ¦       ¦   ¦       owl-carousel.css
+¦   ¦       ¦   ¦       responsive.css
+¦   ¦       ¦   ¦       slicknav.min.css
+¦   ¦       ¦   ¦       
+¦   ¦       ¦   +---fonts
+¦   ¦       ¦   ¦       fontawesome-webfont.eot
+¦   ¦       ¦   ¦       fontawesome-webfont.svg
+¦   ¦       ¦   ¦       fontawesome-webfont.ttf
+¦   ¦       ¦   ¦       fontawesome-webfont.woff
+¦   ¦       ¦   ¦       fontawesome-webfont.woff2
+¦   ¦       ¦   ¦       icofont.eot
+¦   ¦       ¦   ¦       icofont.svg
+¦   ¦       ¦   ¦       icofont.ttf
+¦   ¦       ¦   ¦       icofont.woff
+¦   ¦       ¦   ¦       icofont.woff2
+¦   ¦       ¦   ¦       
+¦   ¦       ¦   +---img
+¦   ¦       ¦   ¦       about-img.jpg
+¦   ¦       ¦   ¦       author1.jpg
+¦   ¦       ¦   ¦       author2.jpg
+¦   ¦       ¦   ¦       author3.jpg
+¦   ¦       ¦   ¦       blockqoute-bg.jpg
+¦   ¦       ¦   ¦       blog-sidebar1.jpg
+¦   ¦       ¦   ¦       blog-sidebar2.jpg
+¦   ¦       ¦   ¦       blog-sidebar3.jpg
+¦   ¦       ¦   ¦       blog1.jpg
+¦   ¦       ¦   ¦       blog2.jpg
+¦   ¦       ¦   ¦       blog3.jpg
+¦   ¦       ¦   ¦       bread-bg.jpg
+¦   ¦       ¦   ¦       call-bg.jpg
+¦   ¦       ¦   ¦       client-bg.jpg
+¦   ¦       ¦   ¦       client1.png
+¦   ¦       ¦   ¦       client2.png
+¦   ¦       ¦   ¦       client3.png
+¦   ¦       ¦   ¦       client4.png
+¦   ¦       ¦   ¦       client5.png
+¦   ¦       ¦   ¦       contact-img.png
+¦   ¦       ¦   ¦       favicon.png
+¦   ¦       ¦   ¦       fun-bg.jpg
+¦   ¦       ¦   ¦       logo.png
+¦   ¦       ¦   ¦       map-marker.png
+¦   ¦       ¦   ¦       mission-img.jpg
+¦   ¦       ¦   ¦       pf1.jpg
+¦   ¦       ¦   ¦       pf2.jpg
+¦   ¦       ¦   ¦       pf3.jpg
+¦   ¦       ¦   ¦       pf4.jpg
+¦   ¦       ¦   ¦       section-img.png
+¦   ¦       ¦   ¦       signup-bg.jpg
+¦   ¦       ¦   ¦       slider.jpg
+¦   ¦       ¦   ¦       slider2.jpg
+¦   ¦       ¦   ¦       slider3.jpg
+¦   ¦       ¦   ¦       testi-bg.jpg
+¦   ¦       ¦   ¦       video-bg.jpg
+¦   ¦       ¦   ¦       
+¦   ¦       ¦   +---js
+¦   ¦       ¦   ¦       bootstrap-datepicker.js
+¦   ¦       ¦   ¦       bootstrap.min.js
+¦   ¦       ¦   ¦       colors.js
+¦   ¦       ¦   ¦       easing.js
+¦   ¦       ¦   ¦       gmaps.min.js
+¦   ¦       ¦   ¦       jquery-migrate-3.0.0.js
+¦   ¦       ¦   ¦       jquery-ui.min.js
+¦   ¦       ¦   ¦       jquery.counterup.min.js
+¦   ¦       ¦   ¦       jquery.magnific-popup.min.js
+¦   ¦       ¦   ¦       jquery.min.js
+¦   ¦       ¦   ¦       jquery.nav.js
+¦   ¦       ¦   ¦       jquery.scrollUp.min.js
+¦   ¦       ¦   ¦       main.js
+¦   ¦       ¦   ¦       map-active.js
+¦   ¦       ¦   ¦       niceselect.js
+¦   ¦       ¦   ¦       owl-carousel.js
+¦   ¦       ¦   ¦       popper.min.js
+¦   ¦       ¦   ¦       slicknav.min.js
+¦   ¦       ¦   ¦       steller.js
+¦   ¦       ¦   ¦       tilt.jquery.min.js
+¦   ¦       ¦   ¦       wow.min.js
+¦   ¦       ¦   ¦       
+¦   ¦       ¦   +---login
+¦   ¦       ¦   ¦   +---css
+¦   ¦       ¦   ¦   ¦   ¦   .DS_Store
+¦   ¦       ¦   ¦   ¦   ¦   bootstrap.min.css
+¦   ¦       ¦   ¦   ¦   ¦   style.css
+¦   ¦       ¦   ¦   ¦   ¦   
+¦   ¦       ¦   ¦   ¦   +---bootstrap
+¦   ¦       ¦   ¦   ¦       ¦   .DS_Store
+¦   ¦       ¦   ¦   ¦       ¦   _media.css
+¦   ¦       ¦   ¦   ¦       ¦   
+¦   ¦       ¦   ¦   ¦       +---mixins
+¦   ¦       ¦   ¦   ¦       ¦       .DS_Store
+¦   ¦       ¦   ¦   ¦       ¦       _border-radius.css
+¦   ¦       ¦   ¦   ¦       ¦       _screen-reader.css
+¦   ¦       ¦   ¦   ¦       ¦       _visibility.css
+¦   ¦       ¦   ¦   ¦       ¦       
+¦   ¦       ¦   ¦   ¦       +---utilities
+¦   ¦       ¦   ¦   ¦               _stretched-link.css
+¦   ¦       ¦   ¦   ¦               
+¦   ¦       ¦   ¦   +---fonts
+¦   ¦       ¦   ¦   ¦       .DS_Store
+¦   ¦       ¦   ¦   ¦       
+¦   ¦       ¦   ¦   +---images
+¦   ¦       ¦   ¦   ¦       .DS_Store
+¦   ¦       ¦   ¦   ¦       
+¦   ¦       ¦   ¦   +---js
+¦   ¦       ¦   ¦   ¦       .DS_Store
+¦   ¦       ¦   ¦   ¦       bootstrap.min.js
+¦   ¦       ¦   ¦   ¦       jquery.min.js
+¦   ¦       ¦   ¦   ¦       main.js
+¦   ¦       ¦   ¦   ¦       popper.js
+¦   ¦       ¦   ¦   ¦       
+¦   ¦       ¦   ¦   +---scss
+¦   ¦       ¦   ¦       ¦   .DS_Store
+¦   ¦       ¦   ¦       ¦   style.scss
+¦   ¦       ¦   ¦       ¦   
+¦   ¦       ¦   ¦       +---bootstrap
+¦   ¦       ¦   ¦           ¦   .DS_Store
+¦   ¦       ¦   ¦           ¦   bootstrap-grid.scss
+¦   ¦       ¦   ¦           ¦   bootstrap-reboot.scss
+¦   ¦       ¦   ¦           ¦   bootstrap.scss
+¦   ¦       ¦   ¦           ¦   _alert.scss
+¦   ¦       ¦   ¦           ¦   _badge.scss
+¦   ¦       ¦   ¦           ¦   _breadcrumb.scss
+¦   ¦       ¦   ¦           ¦   _button-group.scss
+¦   ¦       ¦   ¦           ¦   _buttons.scss
+¦   ¦       ¦   ¦           ¦   _card.scss
+¦   ¦       ¦   ¦           ¦   _carousel.scss
+¦   ¦       ¦   ¦           ¦   _close.scss
+¦   ¦       ¦   ¦           ¦   _code.scss
+¦   ¦       ¦   ¦           ¦   _custom-forms.scss
+¦   ¦       ¦   ¦           ¦   _dropdown.scss
+¦   ¦       ¦   ¦           ¦   _forms.scss
+¦   ¦       ¦   ¦           ¦   _functions.scss
+¦   ¦       ¦   ¦           ¦   _grid.scss
+¦   ¦       ¦   ¦           ¦   _images.scss
+¦   ¦       ¦   ¦           ¦   _input-group.scss
+¦   ¦       ¦   ¦           ¦   _jumbotron.scss
+¦   ¦       ¦   ¦           ¦   _list-group.scss
+¦   ¦       ¦   ¦           ¦   _media.scss
+¦   ¦       ¦   ¦           ¦   _mixins.scss
+¦   ¦       ¦   ¦           ¦   _modal.scss
+¦   ¦       ¦   ¦           ¦   _nav.scss
+¦   ¦       ¦   ¦           ¦   _navbar.scss
+¦   ¦       ¦   ¦           ¦   _pagination.scss
+¦   ¦       ¦   ¦           ¦   _popover.scss
+¦   ¦       ¦   ¦           ¦   _print.scss
+¦   ¦       ¦   ¦           ¦   _progress.scss
+¦   ¦       ¦   ¦           ¦   _reboot.scss
+¦   ¦       ¦   ¦           ¦   _root.scss
+¦   ¦       ¦   ¦           ¦   _spinners.scss
+¦   ¦       ¦   ¦           ¦   _tables.scss
+¦   ¦       ¦   ¦           ¦   _toasts.scss
+¦   ¦       ¦   ¦           ¦   _tooltip.scss
+¦   ¦       ¦   ¦           ¦   _transitions.scss
+¦   ¦       ¦   ¦           ¦   _type.scss
+¦   ¦       ¦   ¦           ¦   _utilities.scss
+¦   ¦       ¦   ¦           ¦   _variables.scss
+¦   ¦       ¦   ¦           ¦   
+¦   ¦       ¦   ¦           +---mixins
+¦   ¦       ¦   ¦           ¦       _alert.scss
+¦   ¦       ¦   ¦           ¦       _background-variant.scss
+¦   ¦       ¦   ¦           ¦       _badge.scss
+¦   ¦       ¦   ¦           ¦       _border-radius.scss
+¦   ¦       ¦   ¦           ¦       _box-shadow.scss
+¦   ¦       ¦   ¦           ¦       _breakpoints.scss
+¦   ¦       ¦   ¦           ¦       _buttons.scss
+¦   ¦       ¦   ¦           ¦       _caret.scss
+¦   ¦       ¦   ¦           ¦       _clearfix.scss
+¦   ¦       ¦   ¦           ¦       _deprecate.scss
+¦   ¦       ¦   ¦           ¦       _float.scss
+¦   ¦       ¦   ¦           ¦       _forms.scss
+¦   ¦       ¦   ¦           ¦       _gradients.scss
+¦   ¦       ¦   ¦           ¦       _grid-framework.scss
+¦   ¦       ¦   ¦           ¦       _grid.scss
+¦   ¦       ¦   ¦           ¦       _hover.scss
+¦   ¦       ¦   ¦           ¦       _image.scss
+¦   ¦       ¦   ¦           ¦       _list-group.scss
+¦   ¦       ¦   ¦           ¦       _lists.scss
+¦   ¦       ¦   ¦           ¦       _nav-divider.scss
+¦   ¦       ¦   ¦           ¦       _pagination.scss
+¦   ¦       ¦   ¦           ¦       _reset-text.scss
+¦   ¦       ¦   ¦           ¦       _resize.scss
+¦   ¦       ¦   ¦           ¦       _screen-reader.scss
+¦   ¦       ¦   ¦           ¦       _size.scss
+¦   ¦       ¦   ¦           ¦       _table-row.scss
+¦   ¦       ¦   ¦           ¦       _text-emphasis.scss
+¦   ¦       ¦   ¦           ¦       _text-hide.scss
+¦   ¦       ¦   ¦           ¦       _text-truncate.scss
+¦   ¦       ¦   ¦           ¦       _transition.scss
+¦   ¦       ¦   ¦           ¦       _visibility.scss
+¦   ¦       ¦   ¦           ¦       
+¦   ¦       ¦   ¦           +---utilities
+¦   ¦       ¦   ¦           ¦       _align.scss
+¦   ¦       ¦   ¦           ¦       _background.scss
+¦   ¦       ¦   ¦           ¦       _borders.scss
+¦   ¦       ¦   ¦           ¦       _clearfix.scss
+¦   ¦       ¦   ¦           ¦       _display.scss
+¦   ¦       ¦   ¦           ¦       _embed.scss
+¦   ¦       ¦   ¦           ¦       _flex.scss
+¦   ¦       ¦   ¦           ¦       _float.scss
+¦   ¦       ¦   ¦           ¦       _overflow.scss
+¦   ¦       ¦   ¦           ¦       _position.scss
+¦   ¦       ¦   ¦           ¦       _screenreaders.scss
+¦   ¦       ¦   ¦           ¦       _shadows.scss
+¦   ¦       ¦   ¦           ¦       _sizing.scss
+¦   ¦       ¦   ¦           ¦       _spacing.scss
+¦   ¦       ¦   ¦           ¦       _stretched-link.scss
+¦   ¦       ¦   ¦           ¦       _text.scss
+¦   ¦       ¦   ¦           ¦       _visibility.scss
+¦   ¦       ¦   ¦           ¦       
+¦   ¦       ¦   ¦           +---vendor
+¦   ¦       ¦   ¦                   _rfs.scss
+¦   ¦       ¦   ¦                   
+¦   ¦       ¦   +---mail
+¦   ¦       ¦           mail.php
+¦   ¦       ¦           
+¦   ¦       +---templates
+¦   ¦           ¦   error-page.html
+¦   ¦           ¦   
+¦   ¦           +---doctor
+¦   ¦           ¦       doctor-home.html
+¦   ¦           ¦       prescription-form.html
+¦   ¦           ¦       view-appointments.html
+¦   ¦           ¦       
+¦   ¦           +---fragments
+¦   ¦           ¦       doctor-header.html
+¦   ¦           ¦       footer.html
+¦   ¦           ¦       pharmacist-header.html
+¦   ¦           ¦       reception-header.html
+¦   ¦           ¦       
+¦   ¦           +---login
+¦   ¦           ¦       loginpage.html
+¦   ¦           ¦       user-registration.html
+¦   ¦           ¦       
+¦   ¦           +---pharmacist
+¦   ¦           ¦       pharmacist-home.html
+¦   ¦           ¦       prescription-list.html
+¦   ¦           ¦       
+¦   ¦           +---reception
+¦   ¦                   appointment-form.html
+¦   ¦                   department-form.html
+¦   ¦                   department-view.html
+¦   ¦                   patient-list.html
+¦   ¦                   patient-registration.html
+¦   ¦                   reception-home.html
+¦   ¦                   select-existing-patient.html
+¦   ¦                   view-appointments.html
+¦   ¦                   
+¦   +---test
+¦       +---java
+¦           +---com
+¦               +---example
+¦                   +---Hospital
+¦                       +---Administration
+¦                           +---System
+¦                                   HospitalAdministrationSystemApplicationTests.java
+¦                                   
++---target
+    ¦   Hospital-Administration-System-0.0.1-SNAPSHOT.jar
+    ¦   Hospital-Administration-System-0.0.1-SNAPSHOT.jar.original
+    ¦   
+    +---classes
+    ¦   ¦   application.properties
+    ¦   ¦   
+    ¦   +---com
+    ¦   ¦   +---example
+    ¦   ¦       +---Hospital
+    ¦   ¦           +---Administration
+    ¦   ¦               +---System
+    ¦   ¦                   ¦   HospitalAdministrationSystemApplication.class
+    ¦   ¦                   ¦   
+    ¦   ¦                   +---contoller
+    ¦   ¦                   ¦       DepartmentController.class
+    ¦   ¦                   ¦       DoctorController.class
+    ¦   ¦                   ¦       LoginController.class
+    ¦   ¦                   ¦       PharmacistController.class
+    ¦   ¦                   ¦       ReceptionController.class
+    ¦   ¦                   ¦       UserController.class
+    ¦   ¦                   ¦       
+    ¦   ¦                   +---entity
+    ¦   ¦                   ¦       Appointment.class
+    ¦   ¦                   ¦       Department.class
+    ¦   ¦                   ¦       Patient.class
+    ¦   ¦                   ¦       Prescription.class
+    ¦   ¦                   ¦       PrescriptionStatus.class
+    ¦   ¦                   ¦       Role.class
+    ¦   ¦                   ¦       Status.class
+    ¦   ¦                   ¦       User.class
+    ¦   ¦                   ¦       
+    ¦   ¦                   +---repository
+    ¦   ¦                   ¦       AppointmentRepository.class
+    ¦   ¦                   ¦       DepartmentRepository.class
+    ¦   ¦                   ¦       PatientRepository.class
+    ¦   ¦                   ¦       PrescriptionRepository.class
+    ¦   ¦                   ¦       UserRepository.class
+    ¦   ¦                   ¦       
+    ¦   ¦                   +---security
+    ¦   ¦                   ¦       CustomUserDetailsService.class
+    ¦   ¦                   ¦       SecurityConfig.class
+    ¦   ¦                   ¦       
+    ¦   ¦                   +---service
+    ¦   ¦                           DepartmentService.class
+    ¦   ¦                           EmailService.class
+    ¦   ¦                           LoginService.class
+    ¦   ¦                           PatientService.class
+    ¦   ¦                           PrescriptionService.class
+    ¦   ¦                           ReceptionService.class
+    ¦   ¦                           UserService.class
+    ¦   ¦                           
+    ¦   +---static
+    ¦   ¦   ¦   style.css
+    ¦   ¦   ¦   
+    ¦   ¦   +---css
+    ¦   ¦   ¦       animate.min.css
+    ¦   ¦   ¦       bootstrap.min.css
+    ¦   ¦   ¦       datepicker.css
+    ¦   ¦   ¦       font-awesome.min.css
+    ¦   ¦   ¦       icofont.css
+    ¦   ¦   ¦       magnific-popup.css
+    ¦   ¦   ¦       nice-select.css
+    ¦   ¦   ¦       normalize.css
+    ¦   ¦   ¦       owl-carousel.css
+    ¦   ¦   ¦       responsive.css
+    ¦   ¦   ¦       slicknav.min.css
+    ¦   ¦   ¦       
+    ¦   ¦   +---fonts
+    ¦   ¦   ¦       fontawesome-webfont.eot
+    ¦   ¦   ¦       fontawesome-webfont.svg
+    ¦   ¦   ¦       fontawesome-webfont.ttf
+    ¦   ¦   ¦       fontawesome-webfont.woff
+    ¦   ¦   ¦       fontawesome-webfont.woff2
+    ¦   ¦   ¦       icofont.eot
+    ¦   ¦   ¦       icofont.svg
+    ¦   ¦   ¦       icofont.ttf
+    ¦   ¦   ¦       icofont.woff
+    ¦   ¦   ¦       icofont.woff2
+    ¦   ¦   ¦       
+    ¦   ¦   +---img
+    ¦   ¦   ¦       about-img.jpg
+    ¦   ¦   ¦       author1.jpg
+    ¦   ¦   ¦       author2.jpg
+    ¦   ¦   ¦       author3.jpg
+    ¦   ¦   ¦       blockqoute-bg.jpg
+    ¦   ¦   ¦       blog-sidebar1.jpg
+    ¦   ¦   ¦       blog-sidebar2.jpg
+    ¦   ¦   ¦       blog-sidebar3.jpg
+    ¦   ¦   ¦       blog1.jpg
+    ¦   ¦   ¦       blog2.jpg
+    ¦   ¦   ¦       blog3.jpg
+    ¦   ¦   ¦       bread-bg.jpg
+    ¦   ¦   ¦       call-bg.jpg
+    ¦   ¦   ¦       client-bg.jpg
+    ¦   ¦   ¦       client1.png
+    ¦   ¦   ¦       client2.png
+    ¦   ¦   ¦       client3.png
+    ¦   ¦   ¦       client4.png
+    ¦   ¦   ¦       client5.png
+    ¦   ¦   ¦       contact-img.png
+    ¦   ¦   ¦       favicon.png
+    ¦   ¦   ¦       fun-bg.jpg
+    ¦   ¦   ¦       logo.png
+    ¦   ¦   ¦       map-marker.png
+    ¦   ¦   ¦       mission-img.jpg
+    ¦   ¦   ¦       pf1.jpg
+    ¦   ¦   ¦       pf2.jpg
+    ¦   ¦   ¦       pf3.jpg
+    ¦   ¦   ¦       pf4.jpg
+    ¦   ¦   ¦       section-img.png
+    ¦   ¦   ¦       signup-bg.jpg
+    ¦   ¦   ¦       slider.jpg
+    ¦   ¦   ¦       slider2.jpg
+    ¦   ¦   ¦       slider3.jpg
+    ¦   ¦   ¦       testi-bg.jpg
+    ¦   ¦   ¦       video-bg.jpg
+    ¦   ¦   ¦       
+    ¦   ¦   +---js
+    ¦   ¦   ¦       bootstrap-datepicker.js
+    ¦   ¦   ¦       bootstrap.min.js
+    ¦   ¦   ¦       colors.js
+    ¦   ¦   ¦       easing.js
+    ¦   ¦   ¦       gmaps.min.js
+    ¦   ¦   ¦       jquery-migrate-3.0.0.js
+    ¦   ¦   ¦       jquery-ui.min.js
+    ¦   ¦   ¦       jquery.counterup.min.js
+    ¦   ¦   ¦       jquery.magnific-popup.min.js
+    ¦   ¦   ¦       jquery.min.js
+    ¦   ¦   ¦       jquery.nav.js
+    ¦   ¦   ¦       jquery.scrollUp.min.js
+    ¦   ¦   ¦       main.js
+    ¦   ¦   ¦       map-active.js
+    ¦   ¦   ¦       niceselect.js
+    ¦   ¦   ¦       owl-carousel.js
+    ¦   ¦   ¦       popper.min.js
+    ¦   ¦   ¦       slicknav.min.js
+    ¦   ¦   ¦       steller.js
+    ¦   ¦   ¦       tilt.jquery.min.js
+    ¦   ¦   ¦       wow.min.js
+    ¦   ¦   ¦       
+    ¦   ¦   +---login
+    ¦   ¦   ¦   +---css
+    ¦   ¦   ¦   ¦   ¦   bootstrap.min.css
+    ¦   ¦   ¦   ¦   ¦   style.css
+    ¦   ¦   ¦   ¦   ¦   
+    ¦   ¦   ¦   ¦   +---bootstrap
+    ¦   ¦   ¦   ¦       ¦   _media.css
+    ¦   ¦   ¦   ¦       ¦   
+    ¦   ¦   ¦   ¦       +---mixins
+    ¦   ¦   ¦   ¦       ¦       _border-radius.css
+    ¦   ¦   ¦   ¦       ¦       _screen-reader.css
+    ¦   ¦   ¦   ¦       ¦       _visibility.css
+    ¦   ¦   ¦   ¦       ¦       
+    ¦   ¦   ¦   ¦       +---utilities
+    ¦   ¦   ¦   ¦               _stretched-link.css
+    ¦   ¦   ¦   ¦               
+    ¦   ¦   ¦   +---js
+    ¦   ¦   ¦   ¦       bootstrap.min.js
+    ¦   ¦   ¦   ¦       jquery.min.js
+    ¦   ¦   ¦   ¦       main.js
+    ¦   ¦   ¦   ¦       popper.js
+    ¦   ¦   ¦   ¦       
+    ¦   ¦   ¦   +---scss
+    ¦   ¦   ¦       ¦   style.scss
+    ¦   ¦   ¦       ¦   
+    ¦   ¦   ¦       +---bootstrap
+    ¦   ¦   ¦           ¦   bootstrap-grid.scss
+    ¦   ¦   ¦           ¦   bootstrap-reboot.scss
+    ¦   ¦   ¦           ¦   bootstrap.scss
+    ¦   ¦   ¦           ¦   _alert.scss
+    ¦   ¦   ¦           ¦   _badge.scss
+    ¦   ¦   ¦           ¦   _breadcrumb.scss
+    ¦   ¦   ¦           ¦   _button-group.scss
+    ¦   ¦   ¦           ¦   _buttons.scss
+    ¦   ¦   ¦           ¦   _card.scss
+    ¦   ¦   ¦           ¦   _carousel.scss
+    ¦   ¦   ¦           ¦   _close.scss
+    ¦   ¦   ¦           ¦   _code.scss
+    ¦   ¦   ¦           ¦   _custom-forms.scss
+    ¦   ¦   ¦           ¦   _dropdown.scss
+    ¦   ¦   ¦           ¦   _forms.scss
+    ¦   ¦   ¦           ¦   _functions.scss
+    ¦   ¦   ¦           ¦   _grid.scss
+    ¦   ¦   ¦           ¦   _images.scss
+    ¦   ¦   ¦           ¦   _input-group.scss
+    ¦   ¦   ¦           ¦   _jumbotron.scss
+    ¦   ¦   ¦           ¦   _list-group.scss
+    ¦   ¦   ¦           ¦   _media.scss
+    ¦   ¦   ¦           ¦   _mixins.scss
+    ¦   ¦   ¦           ¦   _modal.scss
+    ¦   ¦   ¦           ¦   _nav.scss
+    ¦   ¦   ¦           ¦   _navbar.scss
+    ¦   ¦   ¦           ¦   _pagination.scss
+    ¦   ¦   ¦           ¦   _popover.scss
+    ¦   ¦   ¦           ¦   _print.scss
+    ¦   ¦   ¦           ¦   _progress.scss
+    ¦   ¦   ¦           ¦   _reboot.scss
+    ¦   ¦   ¦           ¦   _root.scss
+    ¦   ¦   ¦           ¦   _spinners.scss
+    ¦   ¦   ¦           ¦   _tables.scss
+    ¦   ¦   ¦           ¦   _toasts.scss
+    ¦   ¦   ¦           ¦   _tooltip.scss
+    ¦   ¦   ¦           ¦   _transitions.scss
+    ¦   ¦   ¦           ¦   _type.scss
+    ¦   ¦   ¦           ¦   _utilities.scss
+    ¦   ¦   ¦           ¦   _variables.scss
+    ¦   ¦   ¦           ¦   
+    ¦   ¦   ¦           +---mixins
+    ¦   ¦   ¦           ¦       _alert.scss
+    ¦   ¦   ¦           ¦       _background-variant.scss
+    ¦   ¦   ¦           ¦       _badge.scss
+    ¦   ¦   ¦           ¦       _border-radius.scss
+    ¦   ¦   ¦           ¦       _box-shadow.scss
+    ¦   ¦   ¦           ¦       _breakpoints.scss
+    ¦   ¦   ¦           ¦       _buttons.scss
+    ¦   ¦   ¦           ¦       _caret.scss
+    ¦   ¦   ¦           ¦       _clearfix.scss
+    ¦   ¦   ¦           ¦       _deprecate.scss
+    ¦   ¦   ¦           ¦       _float.scss
+    ¦   ¦   ¦           ¦       _forms.scss
+    ¦   ¦   ¦           ¦       _gradients.scss
+    ¦   ¦   ¦           ¦       _grid-framework.scss
+    ¦   ¦   ¦           ¦       _grid.scss
+    ¦   ¦   ¦           ¦       _hover.scss
+    ¦   ¦   ¦           ¦       _image.scss
+    ¦   ¦   ¦           ¦       _list-group.scss
+    ¦   ¦   ¦           ¦       _lists.scss
+    ¦   ¦   ¦           ¦       _nav-divider.scss
+    ¦   ¦   ¦           ¦       _pagination.scss
+    ¦   ¦   ¦           ¦       _reset-text.scss
+    ¦   ¦   ¦           ¦       _resize.scss
+    ¦   ¦   ¦           ¦       _screen-reader.scss
+    ¦   ¦   ¦           ¦       _size.scss
+    ¦   ¦   ¦           ¦       _table-row.scss
+    ¦   ¦   ¦           ¦       _text-emphasis.scss
+    ¦   ¦   ¦           ¦       _text-hide.scss
+    ¦   ¦   ¦           ¦       _text-truncate.scss
+    ¦   ¦   ¦           ¦       _transition.scss
+    ¦   ¦   ¦           ¦       _visibility.scss
+    ¦   ¦   ¦           ¦       
+    ¦   ¦   ¦           +---utilities
+    ¦   ¦   ¦           ¦       _align.scss
+    ¦   ¦   ¦           ¦       _background.scss
+    ¦   ¦   ¦           ¦       _borders.scss
+    ¦   ¦   ¦           ¦       _clearfix.scss
+    ¦   ¦   ¦           ¦       _display.scss
+    ¦   ¦   ¦           ¦       _embed.scss
+    ¦   ¦   ¦           ¦       _flex.scss
+    ¦   ¦   ¦           ¦       _float.scss
+    ¦   ¦   ¦           ¦       _overflow.scss
+    ¦   ¦   ¦           ¦       _position.scss
+    ¦   ¦   ¦           ¦       _screenreaders.scss
+    ¦   ¦   ¦           ¦       _shadows.scss
+    ¦   ¦   ¦           ¦       _sizing.scss
+    ¦   ¦   ¦           ¦       _spacing.scss
+    ¦   ¦   ¦           ¦       _stretched-link.scss
+    ¦   ¦   ¦           ¦       _text.scss
+    ¦   ¦   ¦           ¦       _visibility.scss
+    ¦   ¦   ¦           ¦       
+    ¦   ¦   ¦           +---vendor
+    ¦   ¦   ¦                   _rfs.scss
+    ¦   ¦   ¦                   
+    ¦   ¦   +---mail
+    ¦   ¦           mail.php
+    ¦   ¦           
+    ¦   +---templates
+    ¦       ¦   error-page.html
+    ¦       ¦   
+    ¦       +---doctor
+    ¦       ¦       doctor-appointments.html
+    ¦       ¦       doctor-home.html
+    ¦       ¦       prescription-form.html
+    ¦       ¦       view-appointments.html
+    ¦       ¦       viewappointments.html
+    ¦       ¦       
+    ¦       +---fragments
+    ¦       ¦       doctor-header.html
+    ¦       ¦       footer.html
+    ¦       ¦       pharmacist-header.html
+    ¦       ¦       reception-header.html
+    ¦       ¦       
+    ¦       +---login
+    ¦       ¦       loginpage.html
+    ¦       ¦       user-registration.html
+    ¦       ¦       
+    ¦       +---pharmacist
+    ¦       ¦       pharmacist-home.html
+    ¦       ¦       prescription-list.html
+    ¦       ¦       
+    ¦       +---reception
+    ¦               apointment-form.html
+    ¦               appointment-form.html
+    ¦               department-form.html
+    ¦               department-view.html
+    ¦               patient-list.html
+    ¦               patient-registration.html
+    ¦               reception-home.html
+    ¦               search-patient.html
+    ¦               select-existing-patient.html
+    ¦               view-appointment.html
+    ¦               view-appointments.html
+    ¦               
+    +---generated-sources
+    ¦   +---annotations
+    +---generated-test-sources
+    ¦   +---test-annotations
+    +---maven-archiver
+    ¦       pom.properties
+    ¦       
+    +---maven-status
+    ¦   +---maven-compiler-plugin
+    ¦       +---compile
+    ¦       ¦   +---default-compile
+    ¦       ¦           createdFiles.lst
+    ¦       ¦           inputFiles.lst
+    ¦       ¦           
+    ¦       +---testCompile
+    ¦           +---default-testCompile
+    ¦                   createdFiles.lst
+    ¦                   inputFiles.lst
+    ¦                   
+    +---surefire-reports
+    ¦       2025-04-09T14-42-14_256.dumpstream
+    ¦       com.example.Hospital.Administration.System.HospitalAdministrationSystemApplicationTests.txt
+    ¦       TEST-com.example.Hospital.Administration.System.HospitalAdministrationSystemApplicationTests.xml
+    ¦       
+    +---test-classes
+        +---com
+            +---example
+                +---Hospital
+                    +---Administration
+                        +---System
+                                HospitalAdministrationSystemApplicationTests.class
+                                
