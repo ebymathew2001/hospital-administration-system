@@ -34,7 +34,9 @@ This Hospital Administration System provides essential hospital services:
 
 
 📁 Project Structure
+## 📁 Project Structure
 
+```plaintext
 Hospital-Administration-System/
 ├── src/
 │   ├── main/
@@ -76,51 +78,52 @@ Hospital-Administration-System/
 │   │   │       ├── UserRegistrationDto.java
 │   │   │       ├── PatientDto.java
 │   │   │       └── AppointmentDto.java
-│   │   ├── resources/
-│   │   │   ├── application.properties
-│   │   │   ├── static/
-│   │   │   │   ├── css/
-│   │   │   │   │   ├── bootstrap.min.css
-│   │   │   │   │   └── style.css
-│   │   │   │   ├── js/
-│   │   │   │   │   ├── jquery.min.js
-│   │   │   │   │   ├── bootstrap.min.js
-│   │   │   │   │   └── main.js
-│   │   │   │   └── images/
-│   │   │   │       └── logo.png
-│   │   │   └── templates/
-│   │   │       ├── login/
-│   │   │       │   ├── login.html
-│   │   │       │   └── register.html
-│   │   │       ├── doctor/
-│   │   │       │   ├── dashboard.html
-│   │   │       │   ├── appointments.html
-│   │   │       │   └── prescription-form.html
-│   │   │       ├── reception/
-│   │   │       │   ├── dashboard.html
-│   │   │       │   ├── patient-registration.html
-│   │   │       │   ├── appointment-booking.html
-│   │   │       │   └── patient-list.html
-│   │   │       ├── pharmacist/
-│   │   │       │   ├── dashboard.html
-│   │   │       │   └── prescription-list.html
-│   │   │       ├── admin/
-│   │   │       │   ├── dashboard.html
-│   │   │       │   └── department-management.html
-│   │   │       └── fragments/
-│   │   │           ├── header.html
-│   │   │           └── footer.html
-│   │   └── webapp/
-│   │       └── WEB-INF/
-│   │           └── web.xml
-│   └── test/java/com/example/hospital/
+│   ├── resources/
+│   │   ├── application.properties
+│   │   ├── static/
+│   │   │   ├── css/
+│   │   │   │   ├── bootstrap.min.css
+│   │   │   │   └── style.css
+│   │   │   ├── js/
+│   │   │   │   ├── jquery.min.js
+│   │   │   │   ├── bootstrap.min.js
+│   │   │   │   └── main.js
+│   │   │   └── images/
+│   │   │       └── logo.png
+│   │   └── templates/
+│   │       ├── login/
+│   │       │   ├── login.html
+│   │       │   └── register.html
+│   │       ├── doctor/
+│   │       │   ├── dashboard.html
+│   │       │   ├── appointments.html
+│   │       │   └── prescription-form.html
+│   │       ├── reception/
+│   │       │   ├── dashboard.html
+│   │       │   ├── patient-registration.html
+│   │       │   ├── appointment-booking.html
+│   │       │   └── patient-list.html
+│   │       ├── pharmacist/
+│   │       │   ├── dashboard.html
+│   │       │   └── prescription-list.html
+│   │       ├── admin/
+│   │       │   ├── dashboard.html
+│   │       │   └── department-management.html
+│   │       └── fragments/
+│   │           ├── header.html
+│   │           └── footer.html
+│   └── webapp/
+│       └── WEB-INF/
+│           └── web.xml
+├── test/
+│   └── java/com/example/hospital/
 │       ├── HospitalApplicationTests.java
 │       ├── controller/ControllerTests.java
 │       ├── service/ServiceTests.java
 │       └── repository/RepositoryTests.java
-├── target/                 # Compiled bytecode and build artifacts
-├── .gitignore              # Git ignore rules
-├── pom.xml                 # Maven configuration file
-├── README.md               # Project description and documentation
-└── application.yml         # Optional alternative config file
-
+├── target/                # Compiled bytecode and build output
+├── .gitignore             # Ignore rules
+├── pom.xml                # Maven project file
+├── README.md              # Project info
+└── application.yml        # Alternative config file
+```
